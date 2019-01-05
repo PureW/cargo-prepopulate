@@ -19,6 +19,11 @@ struct Opts {
 
 fn main() {
     let opt = Opts::from_args();
-    println!("{:?}", opt);
-    cargo_prepopulate::prepopulate(&opt.path).unwrap();
+    std::process::exit(match cargo_prepopulate::prepopulate(&opt.path) {
+        Err(err) => {
+            println!("{:?}", err);
+            1
+        },
+    Ok(_) => 0
+    });
 }
