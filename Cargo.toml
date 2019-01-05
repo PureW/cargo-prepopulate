@@ -1,0 +1,16 @@
+[package]
+authors = ['Anders Bennehag <gthb@bennehag.com>']
+name = 'cargo-prepopulate'
+version = '0.1.0'
+
+description = "Pre-populate a cargo-project from only a Cargo.lock file"
+repository = "https://github.com/PureW/cargo-prepopulate"
+readme = "README.md"
+license = "Apache-2.0/MIT"
+categories = ["development-tools"]
+
+[dependencies]
+serde = '1.0'
+serde_derive = '1.0'
+structopt = '0.2'
+toml = '0.4'
